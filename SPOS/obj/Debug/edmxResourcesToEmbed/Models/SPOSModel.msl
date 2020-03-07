@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SPOSModelStoreContainer" CdmEntityContainer="SPOSEntities">
+    <EntitySetMapping Name="BankInfoes">
+      <EntityTypeMapping TypeName="SPOSModel.BankInfo">
+        <MappingFragment StoreEntitySet="BankInfo">
+          <ScalarProperty Name="BankId" ColumnName="BankId" />
+          <ScalarProperty Name="BankAccName" ColumnName="BankAccName" />
+          <ScalarProperty Name="BankAccNo" ColumnName="BankAccNo" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyInfoes">
+      <EntityTypeMapping TypeName="SPOSModel.CompanyInfo">
+        <MappingFragment StoreEntitySet="CompanyInfo">
+          <ScalarProperty Name="CmpId" ColumnName="CmpId" />
+          <ScalarProperty Name="cmpName" ColumnName="cmpName" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+          <ScalarProperty Name="BrName" ColumnName="BrName" />
+          <ScalarProperty Name="cmpAddressLine1" ColumnName="cmpAddressLine1" />
+          <ScalarProperty Name="cmpAddressLine2" ColumnName="cmpAddressLine2" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Web" ColumnName="Web" />
+          <ScalarProperty Name="OpenDate" ColumnName="OpenDate" />
+          <ScalarProperty Name="TrnDate" ColumnName="TrnDate" />
+          <ScalarProperty Name="FStartDate" ColumnName="FStartDate" />
+          <ScalarProperty Name="FEndDate" ColumnName="FEndDate" />
+          <ScalarProperty Name="CurrentDate" ColumnName="CurrentDate" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Vat" ColumnName="Vat" />
+          <ScalarProperty Name="Vat_Area" ColumnName="Vat_Area" />
+          <ScalarProperty Name="Vat_RegiNo" ColumnName="Vat_RegiNo" />
+          <ScalarProperty Name="Bill_Invoice_Print_Type" ColumnName="Bill_Invoice_Print_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="SPOSModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Dept_Name" ColumnName="Dept_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuHeadWebs">
+      <EntityTypeMapping TypeName="SPOSModel.MenuHeadWeb">
+        <MappingFragment StoreEntitySet="MenuHeadWeb">
+          <ScalarProperty Name="MenuHeadWebID" ColumnName="MenuHeadWebID" />
+          <ScalarProperty Name="MenuHeadWebName" ColumnName="MenuHeadWebName" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="DivID" ColumnName="DivID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuPageWebs">
+      <EntityTypeMapping TypeName="SPOSModel.MenuPageWeb">
+        <MappingFragment StoreEntitySet="MenuPageWeb">
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="SubMenuHeadID" ColumnName="SubMenuHeadID" />
+          <ScalarProperty Name="MenuHeadID" ColumnName="MenuHeadID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+          <ScalarProperty Name="LiID" ColumnName="LiID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuPermissionWebs">
+      <EntityTypeMapping TypeName="SPOSModel.MenuPermissionWeb">
+        <MappingFragment StoreEntitySet="MenuPermissionWeb">
+          <ScalarProperty Name="GrantID" ColumnName="GrantID" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="MenuHeadID" ColumnName="MenuHeadID" />
+          <ScalarProperty Name="SubMenuHeadID" ColumnName="SubMenuHeadID" />
+          <ScalarProperty Name="PageID" ColumnName="PageID" />
+          <ScalarProperty Name="CanView" ColumnName="CanView" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payment_Method">
+      <EntityTypeMapping TypeName="SPOSModel.Payment_Method">
+        <MappingFragment StoreEntitySet="Payment_Method">
+          <ScalarProperty Name="PaymentMethod_ID" ColumnName="PaymentMethod_ID" />
+          <ScalarProperty Name="PaymentMethod_Name" ColumnName="PaymentMethod_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sale_Payment_Method">
+      <EntityTypeMapping TypeName="SPOSModel.Sale_Payment_Method">
+        <MappingFragment StoreEntitySet="Sale_Payment_Method">
+          <ScalarProperty Name="Sale_PaymentMethod_ID" ColumnName="Sale_PaymentMethod_ID" />
+          <ScalarProperty Name="PaymentMethod_ID" ColumnName="PaymentMethod_ID" />
+          <ScalarProperty Name="Sale_Invoice" ColumnName="Sale_Invoice" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Receive_Date" ColumnName="Receive_Date" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_BARCODE">
+      <EntityTypeMapping TypeName="SPOSModel.T_BARCODE">
+        <MappingFragment StoreEntitySet="T_BARCODE">
+          <ScalarProperty Name="BarCode" ColumnName="BarCode" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Category">
+      <EntityTypeMapping TypeName="SPOSModel.T_Category">
+        <MappingFragment StoreEntitySet="T_Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Customer">
+      <EntityTypeMapping TypeName="SPOSModel.T_Customer">
+        <MappingFragment StoreEntitySet="T_Customer">
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="DueAdvance" ColumnName="DueAdvance" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="DueLimit" ColumnName="DueLimit" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CustomerDueCollection">
+      <EntityTypeMapping TypeName="SPOSModel.T_CustomerDueCollection">
+        <MappingFragment StoreEntitySet="T_CustomerDueCollection">
+          <ScalarProperty Name="CustDueCollectionID" ColumnName="CustDueCollectionID" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="CRDate" ColumnName="CRDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DAMAGE">
+      <EntityTypeMapping TypeName="SPOSModel.T_DAMAGE">
+        <MappingFragment StoreEntitySet="T_DAMAGE">
+          <ScalarProperty Name="DamageId" ColumnName="DamageId" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUSER" ColumnName="IUSER" />
+          <ScalarProperty Name="EUSER" ColumnName="EUSER" />
+          <ScalarProperty Name="IDAT" ColumnName="IDAT" />
+          <ScalarProperty Name="EDAT" ColumnName="EDAT" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Department">
+      <EntityTypeMapping TypeName="SPOSModel.T_Department">
+        <MappingFragment StoreEntitySet="T_Department">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Expenses">
+      <EntityTypeMapping TypeName="SPOSModel.T_Expenses">
+        <MappingFragment StoreEntitySet="T_Expenses">
+          <ScalarProperty Name="ExpId" ColumnName="ExpId" />
+          <ScalarProperty Name="ExpDescription" ColumnName="ExpDescription" />
+          <ScalarProperty Name="ExpAmount" ColumnName="ExpAmount" />
+          <ScalarProperty Name="ExpDate" ColumnName="ExpDate" />
+          <ScalarProperty Name="ExpBy" ColumnName="ExpBy" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_GRN_DTL">
+      <EntityTypeMapping TypeName="SPOSModel.T_GRN_DTL">
+        <MappingFragment StoreEntitySet="T_GRN_DTL">
+          <ScalarProperty Name="ReceiveDetailId" ColumnName="ReceiveDetailId" />
+          <ScalarProperty Name="ReceiveId" ColumnName="ReceiveId" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ReturnQty" ColumnName="ReturnQty" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_GRN_MST">
+      <EntityTypeMapping TypeName="SPOSModel.T_GRN_MST">
+        <MappingFragment StoreEntitySet="T_GRN_MST">
+          <ScalarProperty Name="ReceiveId" ColumnName="ReceiveId" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="ReceiveNo" ColumnName="ReceiveNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="ApprovedStatus" ColumnName="ApprovedStatus" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="CashPaid" ColumnName="CashPaid" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUSER" ColumnName="IUSER" />
+          <ScalarProperty Name="EUSER" ColumnName="EUSER" />
+          <ScalarProperty Name="IDAT" ColumnName="IDAT" />
+          <ScalarProperty Name="EDAT" ColumnName="EDAT" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PROD">
+      <EntityTypeMapping TypeName="SPOSModel.T_PROD">
+        <MappingFragment StoreEntitySet="T_PROD">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="PBarcode" ColumnName="PBarcode" />
+          <ScalarProperty Name="PName" ColumnName="PName" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="SalingPrice" ColumnName="SalingPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SALES_DTL">
+      <EntityTypeMapping TypeName="SPOSModel.T_SALES_DTL">
+        <MappingFragment StoreEntitySet="T_SALES_DTL">
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="LotNo" ColumnName="LotNo" />
+          <ScalarProperty Name="SalePrice" ColumnName="SalePrice" />
+          <ScalarProperty Name="SaleQty" ColumnName="SaleQty" />
+          <ScalarProperty Name="DisAomuntPerItems" ColumnName="DisAomuntPerItems" />
+          <ScalarProperty Name="ReturnQty" ColumnName="ReturnQty" />
+          <ScalarProperty Name="CostPrice" ColumnName="CostPrice" />
+          <ScalarProperty Name="ReferenceInvoice" ColumnName="ReferenceInvoice" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SALES_MST">
+      <EntityTypeMapping TypeName="SPOSModel.T_SALES_MST">
+        <MappingFragment StoreEntitySet="T_SALES_MST">
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="SType" ColumnName="SType" />
+          <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+          <ScalarProperty Name="Vat" ColumnName="Vat" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="DiscountTk" ColumnName="DiscountTk" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="DueCollection" ColumnName="DueCollection" />
+          <ScalarProperty Name="CashPaid" ColumnName="CashPaid" />
+          <ScalarProperty Name="CashChange" ColumnName="CashChange" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustAddress" ColumnName="CustAddress" />
+          <ScalarProperty Name="CustPhone" ColumnName="CustPhone" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IUSER" ColumnName="IUSER" />
+          <ScalarProperty Name="EUSER" ColumnName="EUSER" />
+          <ScalarProperty Name="IDAT" ColumnName="IDAT" />
+          <ScalarProperty Name="EDAT" ColumnName="EDAT" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SubCategory">
+      <EntityTypeMapping TypeName="SPOSModel.T_SubCategory">
+        <MappingFragment StoreEntitySet="T_SubCategory">
+          <ScalarProperty Name="SubCategoryID" ColumnName="SubCategoryID" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Supplier">
+      <EntityTypeMapping TypeName="SPOSModel.T_Supplier">
+        <MappingFragment StoreEntitySet="T_Supplier">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SupplierPayment">
+      <EntityTypeMapping TypeName="SPOSModel.T_SupplierPayment">
+        <MappingFragment StoreEntitySet="T_SupplierPayment">
+          <ScalarProperty Name="SPId" ColumnName="SPId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="TrnDate" ColumnName="TrnDate" />
+          <ScalarProperty Name="ReceivedAmount" ColumnName="ReceivedAmount" />
+          <ScalarProperty Name="TrnType" ColumnName="TrnType" />
+          <ScalarProperty Name="Due" ColumnName="Due" />
+          <ScalarProperty Name="SPDescription" ColumnName="SPDescription" />
+          <ScalarProperty Name="Post" ColumnName="Post" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_UNIT">
+      <EntityTypeMapping TypeName="SPOSModel.T_UNIT">
+        <MappingFragment StoreEntitySet="T_UNIT">
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="IUser" ColumnName="IUser" />
+          <ScalarProperty Name="EUser" ColumnName="EUser" />
+          <ScalarProperty Name="IDate" ColumnName="IDate" />
+          <ScalarProperty Name="EDate" ColumnName="EDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SPOSModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BrId" ColumnName="BrId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ConfirmPassword" ColumnName="ConfirmPassword" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="IsRemoved" ColumnName="IsRemoved" />
+          <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

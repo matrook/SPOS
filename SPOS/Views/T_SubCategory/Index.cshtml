@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SPOS.Models.ViewModel>
+
+
+@{
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>SubCategory ID</th>
+        <th>CategoryName</th>
+        <th>SubCategoryName</th>
+
+    </tr>
+
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.subCategories.SubCategoryID</td>
+            <td>@item.categories.CategoryName</td>
+            <td>@item.subCategories.SubCategoryName</td>
+            
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.subCategories.SubCategoryID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.subCategories.SubCategoryID, cid = item.subCategories.CategoryID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.subCategories.SubCategoryID })
+            </td>
+        </tr>
+
+        }
+    </tbody>
+
+   
+
+</table>

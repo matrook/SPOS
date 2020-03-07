@@ -1,0 +1,82 @@
+﻿@model IEnumerable<SPOS.Models.MenuPageWeb>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SubMenuHeadID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuHeadID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LiID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubMenuHeadID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuHeadID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdateDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRemoved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LiID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PageId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PageId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PageId })
+        </td>
+    </tr>
+}
+
+</table>

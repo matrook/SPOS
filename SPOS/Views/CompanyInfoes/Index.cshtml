@@ -1,0 +1,130 @@
+﻿@model IEnumerable<SPOS.Models.CompanyInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cmpAddressLine1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cmpAddressLine2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Web)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrnDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FEndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vat_Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vat_RegiNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bill_Invoice_Print_Type)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cmpAddressLine1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cmpAddressLine2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Web)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrnDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FStartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FEndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Logo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vat_Area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vat_RegiNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bill_Invoice_Print_Type)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.CmpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CmpId }) |
+            @Html.ActionLink("Delete", "Delete", new {id=item.CmpId  })
+        </td>
+    </tr>
+}
+
+</table>

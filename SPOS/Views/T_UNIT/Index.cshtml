@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SPOS.Models.T_UNIT>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRemoved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.UnitID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.UnitID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.UnitID })
+        </td>
+    </tr>
+}
+
+</table>

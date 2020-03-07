@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SPOS.Models.MenuPermissionWeb>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MenuHeadID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubMenuHeadID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PageID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CanView)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MenuHeadID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubMenuHeadID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PageID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CanView)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GrantID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GrantID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GrantID })
+        </td>
+    </tr>
+}
+
+</table>

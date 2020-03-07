@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Content/assets/images/logo.png">
+    <title>Dashboard</title>
+    <!-- Custom CSS -->
+    <link href="~/Content/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="~/Content/assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link href="~/Content/assets/libs/c3/c3.min.css" rel="stylesheet">
+    <link href="~/Content/dist/css/style.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/dist/css/autosearch.css" rel="stylesheet">
+    <link href="~/Content/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'> -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'>
+    <!-- Custom shuvo CSS -->
+    <link href="~/Content/shuvo/SS.css" rel="stylesheet" />
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <!-- ============================================================== -->
+        <div class="preloader">
+            <div class="lds-ripple">
+                <div class="lds-pos"></div>
+                <div class="lds-pos"></div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+<div id="main-wrapper">
+
+    <!-- ============================================================== -->
+    <header class="topbar">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <div class="navbar-header">
+                <!-- This is for the sidebar toggle which is visible on mobile only -->
+                <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="#"><i class="ti-menu ti-close"></i></a>
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <a class="navbar-brand" href="dashboard.html">
+                    <!-- Logo icon -->
+                    <b class="logo-icon">
+                        <img src="~/Content/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                    </b>
+                    <!--End Logo icon -->
+                    <!-- Logo text -->
+                    <span class="logo-text">
+                        <!-- dark Logo text -->
+                        <!-- <img src="~/Content/assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
+                        <img src="~/Content/assets/images/logo-dash.png" alt="homepage" class="dark-logo" />
+                        <!-- Light Logo text -->
+                        <img src="~/Content/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                    </span>
+                </a>
+
+                <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="#" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <!-- ============================================================== -->
+                <!-- toggle and nav items -->
+                <!-- ============================================================== -->
+                <ul class="navbar-nav float-left mr-auto">
+                    <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="#" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+
+                </ul>
+                <!-- ============================================================== -->
+                <ul class="navbar-nav float-right">
+                    <!-- ============================================================== -->
+                    <!-- create new -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="mdi mdi-bell font-24"></i>
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
+                            <span class="with-arrow"><span class="bg-primary"></span></span>
+                            <ul class="list-style-none">
+                                <li>
+                                    <div class="drop-title bg-primary text-white">
+                                        <h4 class="m-b-0 m-t-5">4 New</h4>
+                                        <span class="font-light">Notifications</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="message-center notifications">
+                                        <!-- Message -->
+                                        <a href="#" class="message-item">
+                                            <span class="btn btn-danger btn-circle"><i class="fa fa-link"></i></span>
+                                            <div class="mail-contnet">
+                                                <h5 class="message-title">Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span> <span class="time">9:30 AM</span>
+                                            </div>
+                                        </a>
+                                        <!-- Message -->
+                                        <a href="#" class="message-item">
+                                            <span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
+                                            <div class="mail-contnet">
+                                                <h5 class="message-title">Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span>
+                                            </div>
+                                        </a>
+                                        <!-- Message -->
+                                        <a href="#" class="message-item">
+                                            <span class="btn btn-info btn-circle"><i class="ti-settings"></i></span>
+                                            <div class="mail-contnet">
+                                                <h5 class="message-title">Settings</h5> <span class="mail-desc">You can customize this template as you want</span> <span class="time">9:08 AM</span>
+                                            </div>
+                                        </a>
+                                        <!-- Message -->
+                                        <a href="#" class="message-item">
+                                            <span class="btn btn-primary btn-circle"><i class="ti-user"></i></span>
+                                            <div class="mail-contnet">
+                                                <h5 class="message-title">Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="nav-link text-center m-b-5" href="#;"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <!-- End Messages -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="~/Content/assets/images/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                        <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                            <span class="with-arrow"><span class="bg-primary"></span></span>
+                            <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
+                                <div class=""><img src="~/Content/assets/images/1.jpg" alt="user" class="img-circle" width="60"></div>
+                                <div class="m-l-10">
+                                    <h4 class="m-b-0">Dear -@User.Identity.Name</h4>
+                                    <p class=" m-b-0">shuvo@gmail.com</p>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="viewprofile.html"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                            <a class="dropdown-item" href="create_changepass.html"><i class="ti-wallet m-r-5 m-l-5"></i> Change password</a>
+                            <a class="dropdown-item" href="#"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/Account/Logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                            <div class="dropdown-divider"></div>
+
+                        </div>
+                    </li>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ============================================================== -->
+    <!-- End Topbar header -->
+    <!-- ============================================================== -->
+
+    
+
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <!-- User Profile-->
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/Home/Index" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-inbox-arrow-down"></i><span class="hide-menu">Manage User </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/Users/Index" class="sidebar-link"><i class="mdi mdi-email"></i><span class="hide-menu"> All User </span></a></li>
+                            <li class="sidebar-item"><a href="/Users/Create" class="sidebar-link"><i class="mdi mdi-email-alert"></i><span class="hide-menu"> Add New User </span></a></li>
+                            <li class="sidebar-item"><a href="/Roles/Create" class="sidebar-link"><i class="mdi mdi-email-alert"></i><span class="hide-menu"> Add New role </span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-tune-vertical"></i><span class="hide-menu">Manage Company</span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/CompanyInfoes/Index" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu"> All Company </span></a></li>
+                            <li class="sidebar-item"><a href="/CompanyInfoes/Create" class="sidebar-link"><i class="mdi mdi-view-parallel"></i><span class="hide-menu">Add New Company</span></a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-tune-vertical"></i><span class="hide-menu">Menu Head Webs</span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/MenuHeadWebs/Index" class="sidebar-link"><i class="mdi mdi-view-quilt"></i><span class="hide-menu"> All MenuHeadWebs </span></a></li>
+                            <li class="sidebar-item"><a href="/MenuHeadWebs/Create" class="sidebar-link"><i class="mdi mdi-view-parallel"></i><span class="hide-menu">Add New MenuHeadWebs</span></a></li>
+
+                        </ul>
+                    </li>
+
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-content-copy"></i><span class="hide-menu">Manage Branch </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/T_Department/Index" class="sidebar-link"><i class="mdi mdi-format-align-left"></i><span class="hide-menu">All Branch </span></a></li>
+                            <li class="sidebar-item"><a href="/T_Department/Create" class="sidebar-link"><i class="mdi mdi-format-align-right"></i><span class="hide-menu"> Add New Branch </span></a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-border-none"></i><span class="hide-menu">Employee Information</span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="view_employee.htm" class="sidebar-link"><i class="mdi mdi-border-all"></i><span class="hide-menu">All Employee Info </span></a></li>
+                            <li class="sidebar-item"><a href="create_employee.html" class="sidebar-link"><i class="mdi mdi-border-left"></i><span class="hide-menu">Add Employee Info </span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-border-outside"></i><span class="hide-menu">All Employee Attendance </span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-border-bottom"></i><span class="hide-menu">Add Employee Attendance</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-bookmark-plus-outline"></i><span class="hide-menu">Manage Dealer </span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/Departments/Index" class="sidebar-link"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">All Dealer </span></a></li>
+                            <li class="sidebar-item"><a href="/Departments/Create" class="sidebar-link"><i class="mdi mdi-book-plus"></i><span class="hide-menu">Add Dealer </span></a></li>
+                            <li class="sidebar-item"><a href="/T_CustomerDueCollection/Index" class="sidebar-link"><i class="mdi mdi-book-multiple"></i><span class="hide-menu"> Dealer Collection </span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-credit-card-multiple"></i><span class="hide-menu">Manage Category</span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/T_Category/Index" class="sidebar-link"><i class="mdi mdi-credit-card-scan"></i><span class="hide-menu">All Category</span></a></li>
+                            <li class="sidebar-item"><a href="/T_Category/Create" class="sidebar-link"><i class="mdi mdi-weather-fog"></i><span class="hide-menu">Add New Category</span></a></li>
+                            <li class="sidebar-item"><a href="/T_SubCategory/Index" class="sidebar-link"><i class="mdi mdi-credit-card-scan"></i><span class="hide-menu">All SubCategory</span></a></li>
+                            <li class="sidebar-item"><a href="/T_SubCategory/Create" class="sidebar-link"><i class="mdi mdi-weather-fog"></i><span class="hide-menu">Add New SubCategory</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Payment Method </span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="/Payment_Method/Index" class="sidebar-link"><i class="mdi mdi-toggle-switch"></i><span class="hide-menu">All Payment</span></a></li>
+                            <li class="sidebar-item"><a href="/Payment_Method/Create" class="sidebar-link"><i class="mdi mdi-tablet"></i><span class="hide-menu">Add New Payment</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-credit-card-multiple"></i><span class="hide-menu">Product Information</span></a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item"><a href="/T_PROD/Index" class="sidebar-link"><i class="mdi mdi-layers"></i><span class="hide-menu"> All Product</span></a></li>
+                            <li class="sidebar-item"><a href="/T_PROD/Create" class="sidebar-link"><i class="mdi mdi-credit-card-scan"></i><span class="hide-menu">Add New Product</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-dns"></i><span class="hide-menu">Manage Supplier</span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="/T_Supplier/Index" class="sidebar-link"><i class="mdi mdi-drawing"></i><span class="hide-menu"> View Supplier Info</span></a></li>
+                            <li class="sidebar-item"><a href="/T_Supplier/Create" class="sidebar-link"><i class="mdi mdi-drupal"></i><span class="hide-menu">Add New Supplier</span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-brightness-6"></i><span class="hide-menu"> View Supplier Payment</span></a></li>
+                            <li class="sidebar-item"><a href="/T_SupplierPayment/Index" class="sidebar-link"><i class="mdi mdi-bowling"></i><span class="hide-menu"> Add Supplier Payment</span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-brightness-6"></i><span class="hide-menu"> View Supply Invoice</span></a></li>
+                            <li class="sidebar-item"><a href="create_supply_invoice.html" class="sidebar-link"><i class="mdi mdi-bowling"></i><span class="hide-menu"> Add Supplier Invoice</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-email-open-outline"></i><span class="hide-menu">Stock Inventory</span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="/T_GRN_MST/Index" class="sidebar-link"><i class="mdi mdi-message-alert"></i> <span class="hide-menu"> All Stock Inventory </span></a></li>
+                            <li class="sidebar-item"><a href="/T_GRN_MST/Create" class="sidebar-link"><i class="mdi mdi-message-bulleted"></i><span class="hide-menu"> Add New Inventory</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-collage"></i><span class="hide-menu">Manage Sales</span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="/T_SALES_DTL/Index" class="sidebar-link"><i class="mdi mdi-priority-low"></i><span class="hide-menu">All Point On Sales Retail</span></a></li>
+                            <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-priority-low"></i><span class="hide-menu">View Sales Invoice</span></a></li> -->
+                            <li class="sidebar-item"><a href="/T_SALES_DTL/Create" class="sidebar-link"><i class="mdi mdi-priority-low"></i><span class="hide-menu"> Sales Invoice</span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-priority-low"></i><span class="hide-menu">All Sales Payment </span></a></li>
+                            <li class="sidebar-item"><a href="create_sales_payment.html" class="sidebar-link"><i class="mdi mdi-priority-low"></i><span class="hide-menu">Add Sales Payment </span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Supply Invoice</span></a></li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-code-equal"></i><span class="hide-menu">Stock Received</span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="create_stock_receiving_auto.html" class="sidebar-link"><i class="mdi mdi-export"></i><span class="hide-menu"> Stock Receiving -Auto</span></a></li>
+                            <li class="sidebar-item"><a href="create_stock_receiving_ho.html" class="sidebar-link"><i class="mdi mdi-crop"></i><span class="hide-menu">Stock Receiving-HO</span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-export"></i><span class="hide-menu"> All Opening Stock</span></a></li>
+                            <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-crop"></i><span class="hide-menu">Add Opening Stock</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-pencil-box-outline"></i><span class="hide-menu">Bank Information </span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="/BankInfoes/Index" class="sidebar-link"><i class="mdi mdi-calendar-plus"></i><span class="hide-menu">View Bank Information</span></a></li>
+                            <li class="sidebar-item"><a href="/BankInfoes/Create" class="sidebar-link"><i class="mdi mdi-calendar-clock"></i><span class="hide-menu"> Add Bank Information</span></a></li>
+                            <li class="sidebar-item"><a href="view_bank_deposite.html" class="sidebar-link"><i class="mdi mdi-calendar-range"></i><span class="hide-menu">  View Bank Deposit </span></a></li>
+                            <li class="sidebar-item"><a href="create_bank_deposite.html" class="sidebar-link"><i class="mdi mdi-calendar-check"></i><span class="hide-menu"> Add Bank Deposit </span></a></li>
+                            <!-- <li class="sidebar-item"><a href="#" class="sidebar-link"><i class="mdi mdi-calendar-text"></i><span class="hide-menu"> View Bank Payment </span></a></li> -->
+                            <li class="sidebar-item"><a href="bank_payment.html" class="sidebar-link"><i class="mdi mdi-calendar-text"></i><span class="hide-menu">Add Bank Payment </span></a></li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="daily_expenses_booking.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Daily Expenses Booking</span></a></li>
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span class="hide-menu">Opening & Closing</span></a>
+                        <ul aria-expanded="false" class="collapse first-level">
+                            <li class="sidebar-item"><a href="create_opening_stock.html" class="sidebar-link"><i class="mdi mdi-blur-linear"></i><span class="hide-menu"> Add Opening</span></a></li>
+                            <li class="sidebar-item"><a href="create_day_closed.html" class="sidebar-link"><i class="mdi mdi-blur-linear"></i><span class="hide-menu"> Add Closing</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+    </aside>
+
+    @*<div id="page-wrapper">*@
+
+
+
+
+
+
+<div class="page-wrapper">
+
+    <div>
+        @RenderBody()
+    </div>
+    <!--Footer-->
+    <!-- ============================================================== -->
+
+    <footer class="footer text-center">
+        All Rights Reserved by Serviceone. Designed and Developed by <a href="http://serviceonebd.com/">Serviceone</a>.
+    </footer>
+
+    <!-- ============================================================== -->
+</div>
+
+
+</div>
+
+    }
+    @Html.ActionLink("Login", "Login", "Account")
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script src="~/Content/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Content/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="~/Content/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="~/Content/dist/js/app.min.js"></script>
+    <script src="~/Content/dist/js/app.init.js"></script>
+    <script src="~/Content/dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="~/Content/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <!-- <script src="~/Content/assets/extra-libs/sparkline/sparkline.js"></script> -->
+    <!--Wave Effects -->
+    <script src="~/Content/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="~/Content/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/Content/dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="~/Content/assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="~/Content/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <!--c3 charts -->
+    <script src="~/Content/assets/extra-libs/c3/d3.min.js"></script>
+    <script src="~/Content/assets/extra-libs/c3/c3.min.js"></script>
+    <script src="~/Content/assets/libs/chartist/dist/chartist.min.js"></script>
+    <script src="~/Content/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <!--c3 charts -->
+    <script src="~/Content/assets/libs/c3/d3.min.js"></script>
+    <script src="~/Content/assets/libs/c3/c3.min.js"></script>
+    <script src="~/Content/assets/libs/chart.js/dist/Chart.min.js"></script>
+    <script src="~/Content/dist/js/pages/dashboards/dashboard1.js"></script>
+    <script src="~/Content/assets/extra-libs/DataTables/datatables.min.js"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="~/Content/dist/js/pages/datatable/datatable-advanced.init.js"></script>
+    <!--chartjs -->
+    <script src="~/Content/dist/js/script.js"></script>
+    <script src="~/Content/dist/js/pages/dashboards/dashboard1.js"></script>
+    <script src="~/Content/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- <script src="~/Content/dist/js/pages/datatable/datatables.min.js"></script> -->
+    <!-- <script src="~/Content/dist/js/pages/datatable/datatable-advanced.init.js"></script> -->.
+
+    <!-- <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script> -->
+    <!-- <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.full.js'></script>
+    <script>
+        // Date Picker
+        jQuery('.mydatepicker, #datepicker, .input-group.date').datepicker();
+        jQuery('#datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+        jQuery('#date-range').datepicker({
+            toggleActive: true
+        });
+        jQuery('#datepicker-inline').datepicker({
+            todayHighlight: true
+        });
+    </script>
+       
+    @RenderSection("scripts", required: false)
+</body>
+</html>

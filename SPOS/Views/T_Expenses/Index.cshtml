@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SPOS.Models.T_Expenses>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Post)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Post)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExpId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExpId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExpId })
+        </td>
+    </tr>
+}
+
+</table>

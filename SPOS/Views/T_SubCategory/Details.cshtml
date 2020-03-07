@@ -1,0 +1,77 @@
+﻿@model SPOS.Models.T_SubCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_SubCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Category  @*@Html.DisplayNameFor(model => model.CategoryID)*@
+        </dt>
+
+        <dd>
+
+          
+            @ViewData["CategoryName"]
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsRemoved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubCategoryID ,cid = Model.CategoryID}) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,155 @@
+﻿@model SPOS.Models.CompanyInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CompanyInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cmpAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cmpAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cmpAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cmpAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Web)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Web)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OpenDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OpenDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FEndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vat_Area)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vat_Area)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vat_RegiNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vat_RegiNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bill_Invoice_Print_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bill_Invoice_Print_Type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

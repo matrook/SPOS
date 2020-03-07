@@ -1,0 +1,124 @@
+﻿@model IEnumerable<SPOS.Models.ViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.products.CategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.SubCategoryID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.PBarcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.PName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.CostPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.SalePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.ReorderLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.Manufacture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.UnitID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.IUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.EUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.IDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.EDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.IsRemoved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.products.SalingPrice)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.categories.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subCategories.SubCategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.PBarcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.PName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.CostPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.SalePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.ReorderLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.Manufacture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.UnitID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.IUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.EUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.IDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.EDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.IsRemoved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.products.SalingPrice)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.products.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.products.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.products.ProductID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,67 @@
+﻿@model SPOS.Models.MenuPermissionWeb
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MenuPermissionWeb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MenuHeadID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MenuHeadID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubMenuHeadID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubMenuHeadID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PageID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PageID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CanView)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CanView)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GrantID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

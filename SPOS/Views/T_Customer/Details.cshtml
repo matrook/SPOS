@@ -1,0 +1,99 @@
+﻿@model SPOS.Models.T_Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueAdvance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueAdvance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsRemoved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

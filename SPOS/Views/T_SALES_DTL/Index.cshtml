@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SPOS.Models.T_SALES_DTL>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LotNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaleQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DisAomuntPerItems)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnQty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CostPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReferenceInvoice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LotNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DisAomuntPerItems)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReturnQty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CostPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferenceInvoice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SlNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SlNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SlNo })
+        </td>
+    </tr>
+}
+
+</table>

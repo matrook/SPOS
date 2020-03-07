@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SPOSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BankInfo">
+    <Key>
+      <PropertyRef Name="BankId" />
+    </Key>
+    <Property Name="BankId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BankAccName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BankAccNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="Balance" Type="money" Nullable="false" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="CompanyInfo">
+    <Key>
+      <PropertyRef Name="CmpId" />
+    </Key>
+    <Property Name="CmpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cmpName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BrId" Type="int" />
+    <Property Name="BrName" Type="nvarchar" MaxLength="50" />
+    <Property Name="cmpAddressLine1" Type="nvarchar" MaxLength="50" />
+    <Property Name="cmpAddressLine2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Web" Type="nvarchar" MaxLength="50" />
+    <Property Name="OpenDate" Type="date" />
+    <Property Name="TrnDate" Type="date" />
+    <Property Name="FStartDate" Type="date" />
+    <Property Name="FEndDate" Type="date" />
+    <Property Name="CurrentDate" Type="date" />
+    <Property Name="Logo" Type="varbinary(max)" />
+    <Property Name="Vat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Vat_Area" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vat_RegiNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bill_Invoice_Print_Type" Type="int" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="DeptId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dept_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuHeadWeb">
+    <Key>
+      <PropertyRef Name="MenuHeadWebID" />
+    </Key>
+    <Property Name="MenuHeadWebID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuHeadWebName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="DivID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MenuPageWeb">
+    <Key>
+      <PropertyRef Name="PageId" />
+    </Key>
+    <Property Name="PageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubMenuHeadID" Type="int" />
+    <Property Name="MenuHeadID" Type="int" Nullable="false" />
+    <Property Name="PageName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="LastUpdateDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" Nullable="false" />
+    <Property Name="PageTitle" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LiID" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MenuPermissionWeb">
+    <Key>
+      <PropertyRef Name="GrantID" />
+    </Key>
+    <Property Name="GrantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrId" Type="int" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MenuHeadID" Type="int" Nullable="false" />
+    <Property Name="SubMenuHeadID" Type="int" />
+    <Property Name="PageID" Type="int" Nullable="false" />
+    <Property Name="CanView" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payment_Method">
+    <Key>
+      <PropertyRef Name="PaymentMethod_ID" />
+    </Key>
+    <Property Name="PaymentMethod_ID" Type="int" Nullable="false" />
+    <Property Name="PaymentMethod_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sale_Payment_Method">
+    <Key>
+      <PropertyRef Name="Sale_PaymentMethod_ID" />
+    </Key>
+    <Property Name="Sale_PaymentMethod_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentMethod_ID" Type="int" Nullable="false" />
+    <Property Name="Sale_Invoice" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Amount" Type="money" />
+    <Property Name="Status" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Receive_Date" Type="date" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_BARCODE">
+    <Key>
+      <PropertyRef Name="BarCode" />
+    </Key>
+    <Property Name="BarCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ItemId" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="numeric" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="Address" Type="ntext" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="DueAdvance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="DueLimit" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_CustomerDueCollection">
+    <Key>
+      <PropertyRef Name="CustDueCollectionID" />
+    </Key>
+    <Property Name="CustDueCollectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrId" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="ReceiveAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CRDate" Type="date" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_DAMAGE">
+    <Key>
+      <PropertyRef Name="DamageId" />
+    </Key>
+    <Property Name="DamageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="SubCategoryID" Type="int" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="LotNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitId" Type="int" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="Remarks" Type="nvarchar(max)" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUSER" Type="nvarchar" MaxLength="40" />
+    <Property Name="EUSER" Type="nvarchar" MaxLength="40" />
+    <Property Name="IDAT" Type="datetime" />
+    <Property Name="EDAT" Type="datetime" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_Department">
+    <Key>
+      <PropertyRef Name="DeptId" />
+    </Key>
+    <Property Name="DeptId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DeptName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="T_Expenses">
+    <Key>
+      <PropertyRef Name="ExpId" />
+    </Key>
+    <Property Name="ExpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpDescription" Type="nvarchar" MaxLength="200" />
+    <Property Name="ExpAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ExpDate" Type="date" />
+    <Property Name="ExpBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="Post" Type="smallint" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_GRN_DTL">
+    <Key>
+      <PropertyRef Name="ReceiveDetailId" />
+    </Key>
+    <Property Name="ReceiveDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReceiveId" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="SubCategoryID" Type="int" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="LotNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitId" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="CostPrice" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ReturnQty" Type="int" />
+    <Property Name="SalePrice" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_GRN_MST">
+    <Key>
+      <PropertyRef Name="ReceiveId" />
+    </Key>
+    <Property Name="ReceiveId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReceiveDate" Type="datetime" Nullable="false" />
+    <Property Name="ReceiveNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="ApprovedStatus" Type="bit" />
+    <Property Name="GrossAmount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CashPaid" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="DueAmount" Type="numeric" Precision="20" Scale="2" StoreGeneratedPattern="Computed" />
+    <Property Name="Type" Type="smallint" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUSER" Type="nvarchar" MaxLength="40" />
+    <Property Name="EUSER" Type="nvarchar" MaxLength="40" />
+    <Property Name="IDAT" Type="datetime" />
+    <Property Name="EDAT" Type="datetime" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_PROD">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="int" />
+    <Property Name="SubCategoryID" Type="int" />
+    <Property Name="PBarcode" Type="nvarchar" MaxLength="50" />
+    <Property Name="PName" Type="nvarchar" MaxLength="150" />
+    <Property Name="CostPrice" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SalePrice" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ReorderLevel" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="Manufacture" Type="nvarchar" MaxLength="50" />
+    <Property Name="UnitID" Type="int" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="SalingPrice" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="T_SALES_DTL">
+    <Key>
+      <PropertyRef Name="SlNo" />
+    </Key>
+    <Property Name="SlNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProductID" Type="int" />
+    <Property Name="LotNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SalePrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SaleQty" Type="int" />
+    <Property Name="DisAomuntPerItems" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ReturnQty" Type="int" />
+    <Property Name="CostPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ReferenceInvoice" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_SALES_MST">
+    <Key>
+      <PropertyRef Name="SlNo" />
+    </Key>
+    <Property Name="SlNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SalesDate" Type="date" />
+    <Property Name="SType" Type="smallint" />
+    <Property Name="SubTotal" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Vat" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="GrossAmount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="DiscountTk" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ReceiveAmount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="DueCollection" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CashPaid" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CashChange" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CustomerID" Type="int" />
+    <Property Name="NetAmount" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CustName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="IUSER" Type="nvarchar" MaxLength="40" />
+    <Property Name="EUSER" Type="nvarchar" MaxLength="40" />
+    <Property Name="IDAT" Type="datetime" />
+    <Property Name="EDAT" Type="datetime" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_SubCategory">
+    <Key>
+      <PropertyRef Name="SubCategoryID" />
+    </Key>
+    <Property Name="SubCategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryID" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="SubCategoryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_SupplierPayment">
+    <Key>
+      <PropertyRef Name="SPId" />
+    </Key>
+    <Property Name="SPId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SupplierId" Type="int" Nullable="false" />
+    <Property Name="TrnDate" Type="date" />
+    <Property Name="ReceivedAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TrnType" Type="smallint" />
+    <Property Name="Due" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SPDescription" Type="nvarchar" MaxLength="150" />
+    <Property Name="Post" Type="smallint" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+    <Property Name="BrId" Type="int" />
+  </EntityType>
+  <EntityType Name="T_UNIT">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UnitName" Type="nvarchar" MaxLength="150" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="IUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="EUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDate" Type="datetime" />
+    <Property Name="EDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrId" Type="int" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmailID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ConfirmPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="IsRemoved" Type="bit" />
+    <Property Name="UserFullName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PhoneNo" Type="bigint" />
+  </EntityType>
+  <EntityContainer Name="SPOSModelStoreContainer">
+    <EntitySet Name="BankInfo" EntityType="Self.BankInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyInfo" EntityType="Self.CompanyInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuHeadWeb" EntityType="Self.MenuHeadWeb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuPageWeb" EntityType="Self.MenuPageWeb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuPermissionWeb" EntityType="Self.MenuPermissionWeb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment_Method" EntityType="Self.Payment_Method" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sale_Payment_Method" EntityType="Self.Sale_Payment_Method" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_BARCODE" EntityType="Self.T_BARCODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Category" EntityType="Self.T_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Customer" EntityType="Self.T_Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_CustomerDueCollection" EntityType="Self.T_CustomerDueCollection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_DAMAGE" EntityType="Self.T_DAMAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Department" EntityType="Self.T_Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Expenses" EntityType="Self.T_Expenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_GRN_DTL" EntityType="Self.T_GRN_DTL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_GRN_MST" EntityType="Self.T_GRN_MST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_PROD" EntityType="Self.T_PROD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SALES_DTL" EntityType="Self.T_SALES_DTL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SALES_MST" EntityType="Self.T_SALES_MST" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SubCategory" EntityType="Self.T_SubCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Supplier" EntityType="Self.T_Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_SupplierPayment" EntityType="Self.T_SupplierPayment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_UNIT" EntityType="Self.T_UNIT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

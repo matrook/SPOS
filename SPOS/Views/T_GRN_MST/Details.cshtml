@@ -1,0 +1,147 @@
+﻿@model SPOS.Models.T_GRN_MST
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_GRN_MST</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiveDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiveDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiveNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiveNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApprovedStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApprovedStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrossAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrossAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsRemoved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IUSER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IUSER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUSER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUSER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReceiveId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

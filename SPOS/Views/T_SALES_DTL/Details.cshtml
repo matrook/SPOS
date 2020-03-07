@@ -1,0 +1,99 @@
+﻿@model SPOS.Models.T_SALES_DTL
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_SALES_DTL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisAomuntPerItems)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisAomuntPerItems)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReferenceInvoice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReferenceInvoice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SlNo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

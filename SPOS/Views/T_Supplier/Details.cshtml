@@ -1,0 +1,91 @@
+﻿@model SPOS.Models.T_Supplier
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_Supplier</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsRemoved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SupplierID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

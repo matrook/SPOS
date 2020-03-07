@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SPOS.Models.BankInfo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BankAccName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BankAccNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Balance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BankAccName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BankAccNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BankId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BankId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BankId })
+        </td>
+    </tr>
+}
+
+</table>

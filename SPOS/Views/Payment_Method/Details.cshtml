@@ -1,0 +1,27 @@
+﻿@model SPOS.Models.Payment_Method
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Payment_Method</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentMethod_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentMethod_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PaymentMethod_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

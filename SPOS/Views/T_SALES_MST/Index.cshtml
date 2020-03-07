@@ -1,0 +1,166 @@
+﻿@model IEnumerable<SPOS.Models.T_SALES_MST>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalesDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrossAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiscountTk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceiveAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DueCollection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashPaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashChange)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IUSER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EUSER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SalesDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrossAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiscountTk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceiveAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueCollection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashPaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashChange)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IUSER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EUSER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SlNo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SlNo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SlNo })
+        </td>
+    </tr>
+}
+
+</table>

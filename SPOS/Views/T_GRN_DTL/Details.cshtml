@@ -1,0 +1,107 @@
+﻿@model SPOS.Models.T_GRN_DTL
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_GRN_DTL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceiveId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceiveId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SubCategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SubCategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LotNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LotNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CostPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CostPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalePrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReceiveDetailId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

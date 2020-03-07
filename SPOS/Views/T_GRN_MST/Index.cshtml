@@ -1,0 +1,124 @@
+﻿@model IEnumerable<SPOS.Models.T_GRN_MST>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceiveDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReceiveNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SupplierID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApprovedStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrossAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashPaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DueAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsRemoved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IUSER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EUSER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BrId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceiveDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReceiveNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SupplierID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApprovedStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrossAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashPaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DueAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsRemoved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IUSER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EUSER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BrId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ReceiveId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ReceiveId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ReceiveId })
+        </td>
+    </tr>
+}
+
+</table>

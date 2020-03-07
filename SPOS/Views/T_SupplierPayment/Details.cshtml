@@ -1,0 +1,115 @@
+﻿@model SPOS.Models.T_SupplierPayment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>T_SupplierPayment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReceivedAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReceivedAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrnType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrnType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Due)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Due)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SPDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SPDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Post)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SPId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
