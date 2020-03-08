@@ -161,3 +161,4 @@ D:\Service One POS\SPOS Working Space\SPOS\bin\Microsoft.CodeDom.Providers.DotNe
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.csproj.CopyComplete
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.dll
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.pdb
+D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.csprojAssemblyReference.cache

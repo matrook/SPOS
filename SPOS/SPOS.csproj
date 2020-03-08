@@ -254,8 +254,9 @@
     <Content Include="Content\assets\images\auth-bg.jpg" />
     <Content Include="Content\assets\images\bata.jpg" />
     <Content Include="Content\assets\images\em.jpg" />
-    <Content Include="Content\assets\images\logo-dash.png" />
+    <Content Include="Content\assets\images\420.png" />
     <Content Include="Content\assets\images\logo.png" />
+    <Content Include="Content\assets\images\logo-dash-shuvo.png" />
     <Content Include="Content\assets\images\profile.png" />
     <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-grid.min.css" />
     <Content Include="Content\assets\libs\bootstrap\dist\css\bootstrap-reboot.min.css" />
