@@ -80,7 +80,6 @@ D:\Service One POS\SPOS\SPOS\obj\Debug\SPOS.csprojAssemblyReference.cache
 D:\Service One POS\SPOS\SPOS\obj\Debug\SPOS.csproj.CopyComplete
 D:\Service One POS\SPOS\SPOS\obj\Debug\SPOS.dll
 D:\Service One POS\SPOS\SPOS\obj\Debug\SPOS.pdb
-D:\Service One POS\SPOS Working Space\SPOS\bin\EntityFramework.SqlServer.dll
 D:\Service One POS\SPOS Working Space\SPOS\bin\SPOS.dll.config
 D:\Service One POS\SPOS Working Space\SPOS\bin\SPOS.dll
 D:\Service One POS\SPOS Working Space\SPOS\bin\SPOS.pdb
@@ -135,6 +134,7 @@ D:\Service One POS\SPOS Working Space\SPOS\bin\roslyn\VBCSCompiler.exe
 D:\Service One POS\SPOS Working Space\SPOS\bin\roslyn\VBCSCompiler.exe.config
 D:\Service One POS\SPOS Working Space\SPOS\bin\Antlr3.Runtime.dll
 D:\Service One POS\SPOS Working Space\SPOS\bin\EntityFramework.dll
+D:\Service One POS\SPOS Working Space\SPOS\bin\EntityFramework.SqlServer.dll
 D:\Service One POS\SPOS Working Space\SPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Service One POS\SPOS Working Space\SPOS\bin\Microsoft.Web.Infrastructure.dll
 D:\Service One POS\SPOS Working Space\SPOS\bin\Newtonsoft.Json.dll
@@ -158,7 +158,6 @@ D:\Service One POS\SPOS Working Space\SPOS\bin\System.Web.WebPages.Razor.xml
 D:\Service One POS\SPOS Working Space\SPOS\bin\Newtonsoft.Json.xml
 D:\Service One POS\SPOS Working Space\SPOS\bin\Antlr3.Runtime.pdb
 D:\Service One POS\SPOS Working Space\SPOS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.csprojAssemblyReference.cache
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.csproj.CopyComplete
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.dll
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.pdb
