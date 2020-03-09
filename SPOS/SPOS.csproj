@@ -255,6 +255,10 @@
     <Content Include="Content\assets\images\bata.jpg" />
     <Content Include="Content\assets\images\em.jpg" />
     <Content Include="Content\assets\images\420.png" />
+    <Content Include="Content\assets\images\logo-icon.png" />
+    <Content Include="Content\assets\images\logo-light-icon.png" />
+    <Content Include="Content\assets\images\logo-light-text.png" />
+    <Content Include="Content\assets\images\logo-text.png" />
     <Content Include="Content\assets\images\logo.png" />
     <Content Include="Content\assets\images\logo-dash-shuvo.png" />
     <Content Include="Content\assets\images\profile.png" />
