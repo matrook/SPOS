@@ -33,8 +33,8 @@ namespace SPOS.Controllers
                                      
                                      select new ViewModel
                                      {
-                                         subCategories = s,
-                                         categories = c
+                                         SubCategories = s,
+                                         Categories = c
                                          
                                      };
                 return View(subcategory);

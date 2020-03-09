@@ -11,9 +11,9 @@ using SPOS.Models;
 
 namespace SPOS.Controllers
 {
-    public class T_PRODController : Controller
+    public class PRODController : Controller
     {
-        private SPOSEntities db = new SPOSEntities();
+        private readonly SPOSEntities db = new SPOSEntities();
 
         // GET: T_PROD
         public ActionResult Index()
@@ -36,10 +36,10 @@ namespace SPOS.Controllers
                                   where p.SubCategoryID == s.SubCategoryID
                                   select new ViewModel
                                   {
-                                      subCategories = s,
-                                      categories = c,
-                                      products = p
-                                  }).OrderBy(x => x.products.ProductID); 
+                                      SubCategories = s,
+                                      Categories = c,
+                                      Products = p
+                                  }).OrderBy(x => x.Products.ProductID); 
                 return View(subcategory);
             }
         }
@@ -67,7 +67,7 @@ namespace SPOS.Controllers
             ViewModel model = new ViewModel();
             foreach (var category in entities.T_Category)
             {
-                model.T_Category.Add(new SelectListItem { Text = category.CategoryName, Value = category.CategoryID.ToString() });
+                model.PT_Category.Add(new SelectListItem { Text = category.CategoryName, Value = category.CategoryID.ToString() });
             }
             return View(model);
 
@@ -80,7 +80,7 @@ namespace SPOS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ProductID,CategoryID,SubCategoryID,PBarcode,PName,CostPrice,SalePrice,Discount,ReorderLevel,Manufacture,UnitID,IUser,EUser,IDate,EDate,IsRemoved,SalingPrice")] T_PROD t_PROD,ViewModel viewModel, int? categoryID, int? SubCategoryID)
+        public async Task<ActionResult> Create([Bind(Include = "ProductID,CategoryID,SubCategoryID,PBarcode,PName,CostPrice,SalePrice,Discount,ReorderLevel,Manufacture,UnitID,IUser,EUser,IDate,EDate,IsRemoved,SalingPrice")] ViewModel viewModel, int? categoryID, int? SubCategoryID)
         {
 
          
@@ -89,7 +89,7 @@ namespace SPOS.Controllers
             SPOSEntities entities = new SPOSEntities();
             foreach (var category in entities.T_Category)
             {
-                model.T_Category.Add(new SelectListItem { Text = category.CategoryName, Value = category.CategoryID.ToString() });
+                model.PT_Category.Add(new SelectListItem { Text = category.CategoryName, Value = category.CategoryID.ToString() });
                
             }
 
@@ -100,7 +100,7 @@ namespace SPOS.Controllers
                               select subcategory).ToList();
                 foreach (var subcategory in T_SubCategory)
                 {
-                    model.T_SubCategory.Add(new SelectListItem { Text = subcategory.SubCategoryName, Value = subcategory.SubCategoryID.ToString() });
+                    model.PT_SubCategory.Add(new SelectListItem { Text = subcategory.SubCategoryName, Value = subcategory.SubCategoryID.ToString() });
                 }
 
             
@@ -108,9 +108,9 @@ namespace SPOS.Controllers
 
             if (ModelState.IsValid && SubCategoryID.HasValue)
             {
-                viewModel.products.CategoryID = categoryID.Value;
-                viewModel.products.SubCategoryID = SubCategoryID.Value;
-                db.T_PROD.Add(viewModel.products);
+                viewModel.Products.CategoryID = categoryID.Value;
+                viewModel.Products.SubCategoryID = SubCategoryID.Value;
+                db.T_PROD.Add(viewModel.Products);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

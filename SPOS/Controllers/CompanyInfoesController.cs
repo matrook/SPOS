@@ -13,7 +13,7 @@ namespace SPOS.Controllers
 {
     public class CompanyInfoesController : Controller
     {
-        private SPOSEntities db = new SPOSEntities();
+        private readonly SPOSEntities db = new SPOSEntities();
 
         // GET: CompanyInfoes
         public async Task<ActionResult> Index()
