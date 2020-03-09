@@ -177,6 +177,7 @@
     <Compile Include="Models\Payment_Method.cs">
       <DependentUpon>SPOSModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Sales.cs" />
     <Compile Include="Models\Sale_Payment_Method.cs">
       <DependentUpon>SPOSModel.tt</DependentUpon>
     </Compile>
