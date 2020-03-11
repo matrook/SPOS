@@ -637,6 +637,7 @@
     <Content Include="Content\dist\js\pages\datatable\details_close.png" />
     <Content Include="Content\dist\js\pages\datatable\details_open.png" />
     <Content Include="Content\dist\js\script.js" />
+    <Content Include="Content\dist\js\Shuvo.js" />
     <Content Include="Content\dist\js\sidebarmenu.js" />
     <Content Include="Content\dist\js\waves.js" />
     <Content Include="Content\shuvo\SS.css" />
