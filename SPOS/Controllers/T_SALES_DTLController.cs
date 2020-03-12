@@ -49,13 +49,21 @@ namespace SPOS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public async Task<ActionResult> Create([Bind(Include = "SlNo,InvoiceNo,SalesDate,SType,SubTotal,Vat,GrossAmount,Discount,DiscountTk,ReceiveAmount,DueCollection,CashPaid,CashChange,CustomerID,NetAmount,CustName,CustAddress,CustPhone,Description,IUSER,EUSER,IDAT,EDAT,BrId")] ViewModel viewModel, string barcode)
+=======
+        public async Task<ActionResult> Create([Bind(Include = "SlNo,InvoiceNo,SalesDate,SType,SubTotal,Vat,GrossAmount,Discount,DiscountTk,ReceiveAmount,DueCollection,CashPaid,CashChange,CustomerID,NetAmount,CustName,CustAddress,CustPhone,Description,IUSER,EUSER,IDAT,EDAT,BrId")] ViewModel viewModel,Sales sales, string barcode)
+>>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
         {
 
 
             using (SPOSEntities db = new SPOSEntities())
             {
+<<<<<<< HEAD
                 Sales sales = new Sales();
+=======
+                barcode = sales.Products.PBarcode.ToString();
+>>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
                 SPOSEntities entities = new SPOSEntities();
                 List<T_PROD> cprod = db.T_PROD.ToList();
                 List<T_GRN_DTL> cgrn_dtl = db.T_GRN_DTL.ToList();
@@ -76,7 +84,11 @@ namespace SPOS.Controllers
                                    }).OrderBy(x => x.Products.ProductID);
 
                 ViewBag.Message = subcategory;
+<<<<<<< HEAD
                 return View(subcategory);
+=======
+                return View();
+>>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
             }
             //if (ModelState.IsValid && PBarcode.HasValue)
             //{
