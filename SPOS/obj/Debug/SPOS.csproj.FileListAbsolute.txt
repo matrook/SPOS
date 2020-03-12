@@ -164,7 +164,6 @@ D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.dll
 D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.pdb
 <<<<<<< HEAD
 =======
-D:\Service One POS\SPOS Working Space\SPOS\obj\Debug\SPOS.csprojAssemblyReference.cache
 D:\House SPOS\Code Here\SPOS\bin\roslyn\System.Console.dll
 D:\House SPOS\Code Here\SPOS\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
 D:\House SPOS\Code Here\SPOS\bin\SPOS.dll.config

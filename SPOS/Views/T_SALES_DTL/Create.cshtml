@@ -8,18 +8,11 @@
 
 @{
     var data = ViewBag.Message;
-<<<<<<< HEAD
-}
-
-@using (Html.BeginForm())
-=======
-     
 }
 
 @using (Html.BeginForm("Create", "T_SALES_DTL", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "regform" }))
->>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
-{
-@Html.AntiForgeryToken()
+                {
+    @Html.AntiForgeryToken()
 
 
 <div class="preloader">
@@ -44,8 +37,6 @@
                 <form>
                     <div class="card-body">
                         <h4 class="card-title">Sales </h4>
-
-<<<<<<< HEAD
     <!-- ============================================================== -->
     <!-- Bread crumb and right sidebar toggle -->
     <!-- ============================================================== -->
@@ -359,7 +350,7 @@
                             <label for="inputtext" class="col-sm-2 col-form-label" style="font: italic bold 10px/30px Georgia, serif ">Scan Barcode</label>:
                             <div class="col-sm-3">
 
-                                @Html.TextBoxFor(model => model.Products.PBarcode, new { @placeholder = "example: AC0003",@type = "string", @id = "txtid", @onchange = "onchangeevent();", @onkeypress = "capLock(event);", @onblur = "CallWebService();" })
+                                @Html.TextBoxFor(model => model.Products.PBarcode, new { @placeholder = "example: AC0003", @type = "string", @id = "txtid", @onchange = "onchangeevent();", @onkeypress = "capLock(event);", @onblur = "CallWebService();" })
                                 @Html.ValidationMessageFor(model => model.Products.PBarcode, "", new { @class = "text-danger" })
                                 
                             </div>
@@ -518,7 +509,7 @@
                             </thead>
                             <tbody>
                                 @if (ViewBag.Message != null)
-                                                                    {
+                                {
 
                                 <tr>
 
@@ -533,25 +524,21 @@
                                     </td>
                                 </tr>
 
-                                                                    }
+                                }
 
                             </tbody>
                             <tfoot>
 
                             </tfoot>
                         </table>
->>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-=======
 </div>
->>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
 }
-
 
 <div>
     @Html.ActionLink("Back to List", "Index")

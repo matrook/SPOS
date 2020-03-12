@@ -20,11 +20,10 @@ namespace SPOS
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-<<<<<<< HEAD
-                      "~/Scripts/bootstrap.js", "~/Scripts/Content/dist/js/Shuvo.js"));
-=======
+
+
                       "~/Scripts/bootstrap.js", "~/Scripts/Content/dist/js/shuvo.js"));
->>>>>>> 7b46267ace16ade459fb9480636cff548971ebe9
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
