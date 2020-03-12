@@ -11,7 +11,7 @@ using SPOS.Models;
 
 namespace SPOS.Controllers
 {
-    public class PRODController : Controller
+    public class T_PRODController : Controller
     {
         private readonly SPOSEntities db = new SPOSEntities();
 

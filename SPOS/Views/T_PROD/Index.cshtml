@@ -13,52 +13,52 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.products.CategoryID)
+            @Html.DisplayNameFor(model => model.Products.CategoryID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.SubCategoryID)
+            @Html.DisplayNameFor(model => model.Products.SubCategoryID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.PBarcode)
+            @Html.DisplayNameFor(model => model.Products.PBarcode)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.PName)
+            @Html.DisplayNameFor(model => model.Products.PName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.CostPrice)
+            @Html.DisplayNameFor(model => model.Products.CostPrice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.SalePrice)
+            @Html.DisplayNameFor(model => model.Products.SalePrice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.Discount)
+            @Html.DisplayNameFor(model => model.Products.Discount)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.ReorderLevel)
+            @Html.DisplayNameFor(model => model.Products.ReorderLevel)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.Manufacture)
+            @Html.DisplayNameFor(model => model.Products.Manufacture)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.UnitID)
+            @Html.DisplayNameFor(model => model.Products.UnitID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.IUser)
+            @Html.DisplayNameFor(model => model.Products.IUser)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.EUser)
+            @Html.DisplayNameFor(model => model.Products.EUser)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.IDate)
+            @Html.DisplayNameFor(model => model.Products.IDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.EDate)
+            @Html.DisplayNameFor(model => model.Products.EDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.IsRemoved)
+            @Html.DisplayNameFor(model => model.Products.IsRemoved)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.products.SalingPrice)
+            @Html.DisplayNameFor(model => model.Products.SalingPrice)
         </th>
         <th></th>
     </tr>
@@ -66,57 +66,57 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.categories.CategoryName)
+            @Html.DisplayFor(modelItem => item.Categories.CategoryName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.subCategories.SubCategoryName)
+            @Html.DisplayFor(modelItem => item.SubCategories.SubCategoryName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.PBarcode)
+            @Html.DisplayFor(modelItem => item.Products.PBarcode)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.PName)
+            @Html.DisplayFor(modelItem => item.Products.PName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.CostPrice)
+            @Html.DisplayFor(modelItem => item.Products.CostPrice)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.SalePrice)
+            @Html.DisplayFor(modelItem => item.Products.SalePrice)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.Discount)
+            @Html.DisplayFor(modelItem => item.Products.Discount)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.ReorderLevel)
+            @Html.DisplayFor(modelItem => item.Products.ReorderLevel)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.Manufacture)
+            @Html.DisplayFor(modelItem => item.Products.Manufacture)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.UnitID)
+            @Html.DisplayFor(modelItem => item.Products.UnitID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.IUser)
+            @Html.DisplayFor(modelItem => item.Products.IUser)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.EUser)
+            @Html.DisplayFor(modelItem => item.Products.EUser)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.IDate)
+            @Html.DisplayFor(modelItem => item.Products.IDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.EDate)
+            @Html.DisplayFor(modelItem => item.Products.EDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.IsRemoved)
+            @Html.DisplayFor(modelItem => item.Products.IsRemoved)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.products.SalingPrice)
+            @Html.DisplayFor(modelItem => item.Products.SalingPrice)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.products.ProductID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.products.ProductID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.products.ProductID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Products.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Products.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Products.ProductID })
         </td>
     </tr>
 }
